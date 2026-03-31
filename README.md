@@ -2,14 +2,33 @@
 
 NeuroHealth is an AI-powered health assistant project focused on symptom understanding, urgency triage, care navigation, and safe conversational guidance.
 
+## System Architecture
+
+The architecture combines a hybrid RAG pipeline, clinical triage logic, conversational LLM reasoning, and location-aware provider search in one end-to-end workflow.
+
+![NeuroHealth System Architecture](docs/images/neurohealth_architecture.png)
+
+## Frontend Preview
+
+### Patient Intake
+
+The patient intake screen collects core details such as age group, symptom category, severity, duration, and optional location before the user starts chatting.
+
+![NeuroHealth Patient Intake](docs/images/patient_intake.png)
+
+### Clinical Chat Assistant
+
+The chat interface uses the saved intake context, supports follow-up questions, and can return grounded care guidance together with nearby-provider suggestions when needed.
+
+![NeuroHealth Chatbot](docs/images/chatbot.png)
+
 ## Repository Layout
 
 - `src/neurohealth/phase1/` - Phase 1 data foundation pipeline
 - `configs/` - Source registry, seeds, triage rules, and routing definitions
 - `data/` - Raw snapshots and processed intermediate artifacts
-- `outputs/` - Generated documents, PDFs, and Phase 1 dataset releases
-- `docs/phase1/` - Phase 1 documentation
-- `scripts/` - Pipeline runners and proposal generators
+- `docs/images/` - README architecture and frontend preview images
+- `scripts/` - Pipeline runners and backend entrypoints
 - `tests/` - Validation and regression tests
 - `requirements/` - Environment-specific dependency files
 
@@ -30,7 +49,7 @@ python3 -m pip install -r requirements/backend.txt
 Run the Phase 1 pipeline:
 
 ```bash
-python3 scripts/run_phase1_pipeline.py --project-root /Users/khadar/Desktop/NeuroHealth
+python3 scripts/run_phase1_pipeline.py --project-root "$(pwd)"
 ```
 
 Run the backend API:
