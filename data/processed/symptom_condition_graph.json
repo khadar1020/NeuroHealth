@@ -1,0 +1,282 @@
+{
+  "nodes": [
+    {
+      "node_id": "rule:triage_001",
+      "type": "triage_rule",
+      "urgency": "emergency",
+      "age_group": "adult",
+      "symptom_pattern": [
+        "chest pain",
+        "shortness of breath"
+      ]
+    },
+    {
+      "node_id": "symptom:chest_pain",
+      "type": "symptom",
+      "label": "chest pain"
+    },
+    {
+      "node_id": "symptom:shortness_of_breath",
+      "type": "symptom",
+      "label": "shortness of breath"
+    },
+    {
+      "node_id": "rule:triage_002",
+      "type": "triage_rule",
+      "urgency": "emergency",
+      "age_group": "adult",
+      "symptom_pattern": [
+        "facial droop",
+        "slurred speech",
+        "arm weakness"
+      ]
+    },
+    {
+      "node_id": "symptom:facial_droop",
+      "type": "symptom",
+      "label": "facial droop"
+    },
+    {
+      "node_id": "symptom:slurred_speech",
+      "type": "symptom",
+      "label": "slurred speech"
+    },
+    {
+      "node_id": "symptom:arm_weakness",
+      "type": "symptom",
+      "label": "arm weakness"
+    },
+    {
+      "node_id": "rule:triage_003",
+      "type": "triage_rule",
+      "urgency": "routine",
+      "age_group": "adult",
+      "symptom_pattern": [
+        "fever",
+        "cough",
+        "body aches"
+      ]
+    },
+    {
+      "node_id": "symptom:fever",
+      "type": "symptom",
+      "label": "fever"
+    },
+    {
+      "node_id": "symptom:cough",
+      "type": "symptom",
+      "label": "cough"
+    },
+    {
+      "node_id": "symptom:body_aches",
+      "type": "symptom",
+      "label": "body aches"
+    },
+    {
+      "node_id": "rule:triage_004",
+      "type": "triage_rule",
+      "urgency": "urgent",
+      "age_group": "child",
+      "symptom_pattern": [
+        "wheezing",
+        "difficulty breathing"
+      ]
+    },
+    {
+      "node_id": "symptom:wheezing",
+      "type": "symptom",
+      "label": "wheezing"
+    },
+    {
+      "node_id": "symptom:difficulty_breathing",
+      "type": "symptom",
+      "label": "difficulty breathing"
+    },
+    {
+      "node_id": "rule:triage_005",
+      "type": "triage_rule",
+      "urgency": "emergency",
+      "age_group": "infant",
+      "symptom_pattern": [
+        "infant fever",
+        "lethargy"
+      ]
+    },
+    {
+      "node_id": "symptom:infant_fever",
+      "type": "symptom",
+      "label": "infant fever"
+    },
+    {
+      "node_id": "symptom:lethargy",
+      "type": "symptom",
+      "label": "lethargy"
+    },
+    {
+      "node_id": "rule:triage_006",
+      "type": "triage_rule",
+      "urgency": "self_care",
+      "age_group": "adult",
+      "symptom_pattern": [
+        "itchy rash",
+        "no breathing issue"
+      ]
+    },
+    {
+      "node_id": "symptom:itchy_rash",
+      "type": "symptom",
+      "label": "itchy rash"
+    },
+    {
+      "node_id": "symptom:no_breathing_issue",
+      "type": "symptom",
+      "label": "no breathing issue"
+    },
+    {
+      "node_id": "topic:endocrinology",
+      "type": "medical_topic",
+      "label": "endocrinology"
+    },
+    {
+      "node_id": "rule:triage_007",
+      "type": "triage_rule",
+      "urgency": "urgent",
+      "age_group": "adolescent",
+      "symptom_pattern": [
+        "persistent high blood sugar",
+        "polyuria",
+        "polydipsia"
+      ]
+    },
+    {
+      "node_id": "symptom:persistent_high_blood_sugar",
+      "type": "symptom",
+      "label": "persistent high blood sugar"
+    },
+    {
+      "node_id": "symptom:polyuria",
+      "type": "symptom",
+      "label": "polyuria"
+    },
+    {
+      "node_id": "symptom:polydipsia",
+      "type": "symptom",
+      "label": "polydipsia"
+    },
+    {
+      "node_id": "rule:triage_008",
+      "type": "triage_rule",
+      "urgency": "emergency",
+      "age_group": "adolescent",
+      "symptom_pattern": [
+        "suicidal thoughts"
+      ]
+    },
+    {
+      "node_id": "symptom:suicidal_thoughts",
+      "type": "symptom",
+      "label": "suicidal thoughts"
+    }
+  ],
+  "edges": [
+    {
+      "from": "symptom:chest_pain",
+      "to": "rule:triage_001",
+      "relation": "mapped_to_triage_rule"
+    },
+    {
+      "from": "symptom:shortness_of_breath",
+      "to": "rule:triage_001",
+      "relation": "mapped_to_triage_rule"
+    },
+    {
+      "from": "symptom:facial_droop",
+      "to": "rule:triage_002",
+      "relation": "mapped_to_triage_rule"
+    },
+    {
+      "from": "symptom:slurred_speech",
+      "to": "rule:triage_002",
+      "relation": "mapped_to_triage_rule"
+    },
+    {
+      "from": "symptom:arm_weakness",
+      "to": "rule:triage_002",
+      "relation": "mapped_to_triage_rule"
+    },
+    {
+      "from": "symptom:fever",
+      "to": "rule:triage_003",
+      "relation": "mapped_to_triage_rule"
+    },
+    {
+      "from": "symptom:cough",
+      "to": "rule:triage_003",
+      "relation": "mapped_to_triage_rule"
+    },
+    {
+      "from": "symptom:body_aches",
+      "to": "rule:triage_003",
+      "relation": "mapped_to_triage_rule"
+    },
+    {
+      "from": "symptom:wheezing",
+      "to": "rule:triage_004",
+      "relation": "mapped_to_triage_rule"
+    },
+    {
+      "from": "symptom:difficulty_breathing",
+      "to": "rule:triage_004",
+      "relation": "mapped_to_triage_rule"
+    },
+    {
+      "from": "symptom:infant_fever",
+      "to": "rule:triage_005",
+      "relation": "mapped_to_triage_rule"
+    },
+    {
+      "from": "symptom:lethargy",
+      "to": "rule:triage_005",
+      "relation": "mapped_to_triage_rule"
+    },
+    {
+      "from": "symptom:itchy_rash",
+      "to": "rule:triage_006",
+      "relation": "mapped_to_triage_rule"
+    },
+    {
+      "from": "symptom:no_breathing_issue",
+      "to": "rule:triage_006",
+      "relation": "mapped_to_triage_rule"
+    },
+    {
+      "from": "rule:triage_006",
+      "to": "topic:endocrinology",
+      "relation": "supported_by_topic"
+    },
+    {
+      "from": "symptom:persistent_high_blood_sugar",
+      "to": "rule:triage_007",
+      "relation": "mapped_to_triage_rule"
+    },
+    {
+      "from": "symptom:polyuria",
+      "to": "rule:triage_007",
+      "relation": "mapped_to_triage_rule"
+    },
+    {
+      "from": "symptom:polydipsia",
+      "to": "rule:triage_007",
+      "relation": "mapped_to_triage_rule"
+    },
+    {
+      "from": "symptom:suicidal_thoughts",
+      "to": "rule:triage_008",
+      "relation": "mapped_to_triage_rule"
+    }
+  ],
+  "stats": {
+    "node_count": 27,
+    "edge_count": 19
+  }
+}

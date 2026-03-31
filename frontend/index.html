@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <title>NeuroHealth Assistant Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/frontend/styles.css?v=20260328-002">
+</head>
+<body>
+  <div class="backdrop-shape shape-1"></div>
+  <div class="backdrop-shape shape-2"></div>
+
+  <section id="loadingView" class="loading-view">
+    <div class="loading-card">
+      <div class="brand loading-brand">
+        <img src="/frontend/assets/neurohealth-logo.svg" alt="NeuroHealth logo" class="brand-logo brand-logo-large">
+        <div class="brand-copy">
+          <p class="brand-name"><span class="loading-word">NeuroHealth</span></p>
+          <p class="brand-tag">AI-Powered Health Assistant</p>
+        </div>
+      </div>
+      <p class="loading-sub">Preparing patient intake workflow...</p>
+      <div class="loading-bar"><span></span></div>
+    </div>
+  </section>
+
+  <div id="appView" class="page-shell hidden">
+    <header class="page-header">
+      <div>
+        <div class="brand heading-brand">
+          <img src="/frontend/assets/neurohealth-logo.svg" alt="NeuroHealth logo" class="brand-logo">
+          <div class="brand-copy">
+            <p class="brand-name">NeuroHealth</p>
+            <p class="brand-tag">AI-Powered Health Assistant</p>
+          </div>
+        </div>
+        <p class="subheading">
+          NeuroHealth provides clinically guided intake, conversational triage, and care-routing support for safer first-response health assistance.
+        </p>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section id="intakeStage" class="panel intake-stage">
+        <div class="panel-head">
+          <h2>Patient Intake</h2>
+          <p>Provide baseline clinical details if available, or skip for now and let NeuroHealth ask only for the missing details it needs.</p>
+        </div>
+
+        <form id="intakeForm" class="intake-form">
+          <label>
+            Patient age group
+            <select name="ageGroup" required>
+              <option value="">Select age group</option>
+              <option value="infant">Infant (0-1 years)</option>
+              <option value="child">Child (2-12 years)</option>
+              <option value="adolescent">Adolescent (13-17 years)</option>
+              <option value="adult">Adult (18-64 years)</option>
+              <option value="older_adult">Older Adult (65+ years)</option>
+            </select>
+          </label>
+
+          <label>
+            Sex at birth (optional)
+            <select id="sexAtBirthSelect" name="sexAtBirth">
+              <option value="">Prefer not to say</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="intersex">Intersex</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+
+          <label id="sexOtherWrap" class="hidden">
+            Specify sex at birth
+            <input type="text" name="sexAtBirthOther" placeholder="Please specify">
+          </label>
+
+          <label>
+            Location (city / postal code)
+            <input type="text" name="location" placeholder="Example: Hyderabad 500081">
+          </label>
+
+          <label>
+            Main symptom category
+            <select id="symptomCategorySelect" name="symptomCategory" required>
+              <option value="">Select symptom type</option>
+              <option value="chest_pain_breathing">Chest pain / breathing</option>
+              <option value="stroke_signs">Stroke-like signs</option>
+              <option value="respiratory_distress_moderate">Respiratory distress</option>
+              <option value="pediatric_fever">Pediatric fever</option>
+              <option value="metabolic_risk">Blood sugar / metabolic</option>
+              <option value="mild_skin">Skin / rash</option>
+              <option value="mental_health_non_crisis">Mental health (non-crisis)</option>
+              <option value="mental_health_crisis">Mental health crisis</option>
+              <option value="general">General concern</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+
+          <label id="symptomOtherWrap" class="hidden">
+            Specify symptom category
+            <input type="text" name="symptomCategoryOther" placeholder="Describe symptom category">
+          </label>
+
+          <label>
+            Duration
+            <select name="duration" required>
+              <option value="">Select duration</option>
+              <option value="few_hours">A few hours</option>
+              <option value="since_morning">Since this morning</option>
+              <option value="one_day">About one day</option>
+              <option value="few_days">A few days</option>
+              <option value="one_week_plus">One week or more</option>
+            </select>
+          </label>
+
+          <label>
+            Severity
+            <select name="severity" required>
+              <option value="">Select severity</option>
+              <option value="mild">Mild</option>
+              <option value="moderate">Moderate</option>
+              <option value="severe">Severe</option>
+            </select>
+          </label>
+
+          <label class="full-span">
+            Existing conditions (optional)
+            <textarea name="conditions" rows="2" placeholder="Example: asthma, diabetes, hypertension"></textarea>
+          </label>
+
+          <label class="full-span">
+            Current medications (optional)
+            <textarea name="medications" rows="2" placeholder="Example: metformin, inhaler, insulin"></textarea>
+          </label>
+
+          <div class="intake-actions">
+            <button type="submit" class="btn btn-primary">Save Intake and Continue</button>
+            <button id="skipIntakeBtn" type="button" class="btn btn-light">Skip for now</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="chatStage" class="chat-stage hidden">
+        <section id="chatPanel" class="panel chat-panel">
+          <div class="panel-head chat-head">
+            <div>
+              <h2>Clinical Chat Assistant</h2>
+              <p>Describe your concern in natural language for triage and care guidance.</p>
+            </div>
+            <span id="urgencyBadge" class="urgency-badge neutral">No triage yet</span>
+          </div>
+
+          <div id="quickPrompts" class="quick-prompts">
+            <button class="chip" type="button" data-text="I have chest pain and shortness of breath since this morning. What should I do?">Chest pain + breathing issue</button>
+            <button class="chip" type="button" data-text="My child has fever and wheezing for one day. Should we go to urgent care?">Child fever + wheezing</button>
+            <button class="chip" type="button" data-text="I have persistent high blood sugar and frequent urination for 2 days. Which doctor should I see?">High blood sugar concern</button>
+          </div>
+
+          <div id="chatLog" class="chat-log" aria-live="polite"></div>
+
+          <div id="chatProgress" class="chat-progress hidden" aria-live="polite">
+            <span class="chat-progress-dot" aria-hidden="true"></span>
+            <p id="chatProgressText">LLM is analyzing your input...</p>
+          </div>
+
+          <form id="chatForm" class="chat-form">
+            <textarea id="chatInput" rows="2" placeholder="Describe symptoms, duration, and any warning signs..." required></textarea>
+            <button id="chatSendBtn" type="submit" class="btn btn-accent icon-only" aria-label="Send message" title="Send message">
+              <svg class="send-button-icon" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M4.75 10h8.5M10.5 4.75 15.75 10l-5.25 5.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1"></path>
+              </svg>
+              <span class="sr-only">Send</span>
+            </button>
+          </form>
+        </section>
+
+        <aside id="intakeMiniCard" class="panel intake-mini collapsed">
+          <div class="intake-mini-head">
+            <div>
+              <p class="sidebar-eyebrow">Patient Intake</p>
+              <h3>Context Snapshot</h3>
+            </div>
+            <div class="mini-actions">
+              <button id="toggleIntakeBtn" type="button" class="btn btn-light">Expand</button>
+              <button id="editIntakeBtn" type="button" class="btn btn-light">Edit</button>
+            </div>
+          </div>
+          <div id="intakeMiniCompact" class="intake-mini-compact"></div>
+          <div id="intakeMiniDetails" class="intake-mini-details hidden"></div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <template id="messageTemplate">
+    <article class="message">
+      <p class="message-role"></p>
+      <div class="message-body"></div>
+    </article>
+  </template>
+
+  <script src="/frontend/app.js?v=20260328-002"></script>
+</body>
+</html>

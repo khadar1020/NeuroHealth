@@ -1,0 +1,72 @@
+[
+  {
+    "routing_id": "route_001",
+    "urgency_level": "self_care",
+    "symptom_cluster": "mild_skin",
+    "recommended_care_level": "self_care",
+    "specialty": "primary_care"
+  },
+  {
+    "routing_id": "route_002",
+    "urgency_level": "routine",
+    "symptom_cluster": "common_respiratory",
+    "recommended_care_level": "primary_care_visit",
+    "specialty": "primary_care"
+  },
+  {
+    "routing_id": "route_003",
+    "urgency_level": "routine",
+    "symptom_cluster": "mental_health_non_crisis",
+    "recommended_care_level": "outpatient_visit",
+    "specialty": "psychiatry"
+  },
+  {
+    "routing_id": "route_004",
+    "urgency_level": "urgent",
+    "symptom_cluster": "respiratory_distress_moderate",
+    "recommended_care_level": "urgent_care",
+    "specialty": "pulmonology"
+  },
+  {
+    "routing_id": "route_005",
+    "urgency_level": "urgent",
+    "symptom_cluster": "pediatric_fever",
+    "recommended_care_level": "same_day_visit",
+    "specialty": "pediatrics"
+  },
+  {
+    "routing_id": "route_006",
+    "urgency_level": "urgent",
+    "symptom_cluster": "metabolic_risk",
+    "recommended_care_level": "urgent_care",
+    "specialty": "endocrinology"
+  },
+  {
+    "routing_id": "route_007",
+    "urgency_level": "emergency",
+    "symptom_cluster": "chest_pain_breathing",
+    "recommended_care_level": "emergency_department",
+    "specialty": "emergency"
+  },
+  {
+    "routing_id": "route_008",
+    "urgency_level": "emergency",
+    "symptom_cluster": "stroke_signs",
+    "recommended_care_level": "emergency_department",
+    "specialty": "neurology"
+  },
+  {
+    "routing_id": "route_009",
+    "urgency_level": "emergency",
+    "symptom_cluster": "anaphylaxis",
+    "recommended_care_level": "emergency_department",
+    "specialty": "allergy_immunology"
+  },
+  {
+    "routing_id": "route_010",
+    "urgency_level": "emergency",
+    "symptom_cluster": "mental_health_crisis",
+    "recommended_care_level": "emergency_crisis_service",
+    "specialty": "psychiatry"
+  }
+]

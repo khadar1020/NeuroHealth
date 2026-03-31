@@ -1,0 +1,66 @@
+[
+  {
+    "rule_id": "triage_001",
+    "symptom_pattern": ["chest pain", "shortness of breath"],
+    "age_group": "adult",
+    "urgency_level": "emergency",
+    "rationale": "Potential acute coronary syndrome or severe cardiopulmonary compromise.",
+    "evidence_ids": ["cdc_public_pages:heart-warning"]
+  },
+  {
+    "rule_id": "triage_002",
+    "symptom_pattern": ["facial droop", "slurred speech", "arm weakness"],
+    "age_group": "adult",
+    "urgency_level": "emergency",
+    "rationale": "Possible acute stroke signs.",
+    "evidence_ids": ["cdc_public_pages:stroke-signs"]
+  },
+  {
+    "rule_id": "triage_003",
+    "symptom_pattern": ["fever", "cough", "body aches"],
+    "age_group": "adult",
+    "urgency_level": "routine",
+    "rationale": "Viral syndrome without red flags can often begin with routine care.",
+    "evidence_ids": ["cdc_public_pages:flu-symptoms"]
+  },
+  {
+    "rule_id": "triage_004",
+    "symptom_pattern": ["wheezing", "difficulty breathing"],
+    "age_group": "child",
+    "urgency_level": "urgent",
+    "rationale": "Pediatric respiratory symptoms require conservative escalation.",
+    "evidence_ids": ["cdc_public_pages:asthma"]
+  },
+  {
+    "rule_id": "triage_005",
+    "symptom_pattern": ["infant fever", "lethargy"],
+    "age_group": "infant",
+    "urgency_level": "emergency",
+    "rationale": "Infant fever with lethargy is high risk.",
+    "evidence_ids": ["nih_public_pages:pediatric"]
+  },
+  {
+    "rule_id": "triage_006",
+    "symptom_pattern": ["itchy rash", "no breathing issue"],
+    "age_group": "adult",
+    "urgency_level": "self_care",
+    "rationale": "Mild isolated rash without red flags may start with self-care.",
+    "evidence_ids": ["medlineplus_connect:rash"]
+  },
+  {
+    "rule_id": "triage_007",
+    "symptom_pattern": ["persistent high blood sugar", "polyuria", "polydipsia"],
+    "age_group": "adolescent",
+    "urgency_level": "urgent",
+    "rationale": "Possible uncontrolled diabetes requiring prompt evaluation.",
+    "evidence_ids": ["cdc_public_pages:diabetes"]
+  },
+  {
+    "rule_id": "triage_008",
+    "symptom_pattern": ["suicidal thoughts"],
+    "age_group": "adolescent",
+    "urgency_level": "emergency",
+    "rationale": "Immediate mental health crisis escalation is required.",
+    "evidence_ids": ["hhs_public_pages:mental-health"]
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {"source_id": "cdc_public_pages", "url": "https://www.cdc.gov/flu/signs-symptoms/index.html", "topic": "Influenza signs and symptoms"},
+  {"source_id": "cdc_public_pages", "url": "https://www.cdc.gov/covid/signs-symptoms/index.html", "topic": "COVID-19 signs and symptoms"},
+  {"source_id": "cdc_public_pages", "url": "https://www.cdc.gov/stroke/about/index.html", "topic": "Stroke overview"},
+  {"source_id": "cdc_public_pages", "url": "https://www.cdc.gov/stroke/prevention/index.html", "topic": "Stroke prevention"},
+  {"source_id": "cdc_public_pages", "url": "https://www.cdc.gov/heart-disease/about/index.html", "topic": "Heart disease overview"},
+  {"source_id": "cdc_public_pages", "url": "https://www.cdc.gov/diabetes/signs-symptoms/index.html", "topic": "Diabetes signs and symptoms"},
+  {"source_id": "cdc_public_pages", "url": "https://www.cdc.gov/asthma/about/index.html", "topic": "Asthma overview"},
+  {"source_id": "cdc_public_pages", "url": "https://www.cdc.gov/pregnancy/about/index.html", "topic": "Pregnancy overview"},
+  {"source_id": "cdc_public_pages", "url": "https://www.cdc.gov/antibiotic-use/about/index.html", "topic": "Antibiotic use"},
+  {"source_id": "cdc_public_pages", "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/index.html", "topic": "Immunization schedules"},
+
+  {"source_id": "nih_public_pages", "url": "https://www.nih.gov/health-information/your-healthiest-self-wellness-toolkits", "topic": "Wellness toolkits"},
+  {"source_id": "nih_public_pages", "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders", "topic": "Anxiety disorders"},
+  {"source_id": "nih_public_pages", "url": "https://www.nimh.nih.gov/health/topics/depression", "topic": "Depression"},
+  {"source_id": "nih_public_pages", "url": "https://www.nhlbi.nih.gov/health/heart-attack", "topic": "Heart attack guidance"},
+  {"source_id": "nih_public_pages", "url": "https://www.nhlbi.nih.gov/health/asthma", "topic": "Asthma guidance"},
+
+  {"source_id": "hhs_public_pages", "url": "https://womenshealth.gov/pregnancy/youre-pregnant-now-what", "topic": "Pregnancy guidance"},
+  {"source_id": "hhs_public_pages", "url": "https://www.hiv.gov/hiv-basics/overview/about-hiv-and-aids/what-are-hiv-and-aids", "topic": "HIV and AIDS overview"},
+  {"source_id": "hhs_public_pages", "url": "https://www.hiv.gov/hiv-basics/overview/about-hiv-and-aids/symptoms-of-hiv", "topic": "HIV symptoms"},
+  {"source_id": "hhs_public_pages", "url": "https://www.hiv.gov/hiv-basics/staying-in-hiv-care/other-related-health-issues/mental-health", "topic": "HIV and mental health"}
+]

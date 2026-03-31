@@ -1,0 +1,31 @@
+{
+  "admitted": [
+    {
+      "candidate_id": "medquad",
+      "name": "MedQuAD",
+      "type": "medical_qa",
+      "repo_api": "https://api.github.com/repos/abachaa/MedQuAD",
+      "dataset_url": "https://github.com/abachaa/MedQuAD",
+      "license_hint_url": "https://raw.githubusercontent.com/abachaa/MedQuAD/master/readme.txt",
+      "license_hint_contains": "Creative Commons Attribution 4.0 International Licence (CC BY)",
+      "status": "admitted",
+      "license_key": "cc-by-4.0",
+      "license_name": "Creative Commons Attribution 4.0 International",
+      "spdx": "NOASSERTION"
+    }
+  ],
+  "quarantined": [
+    {
+      "candidate_id": "synthea",
+      "name": "Synthea",
+      "type": "synthetic_health_records",
+      "repo_api": "https://api.github.com/repos/synthetichealth/synthea",
+      "dataset_url": "https://github.com/synthetichealth/synthea",
+      "status": "quarantine",
+      "reason": "dataset_type_not_medical_qa",
+      "license_key": "apache-2.0",
+      "license_name": "Apache License 2.0",
+      "spdx": "Apache-2.0"
+    }
+  ]
+}
